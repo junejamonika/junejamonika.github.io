@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cinemabuff</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./assets/js/popup.js"></script>
+  </head>
+  <body>
+    <!-- The Modal -->
+    <div id="discount-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close"><img src="./assets/images/close.png"/></span>
+        <p class="modal-heading">Your 5 free minutes are up!</p>
+        <p class="discount-heading">
+          70% OFF<span class="discount-heading-small ml-20px">only today!</span>
+        </p>
+        <p>Unlimited access to all the movies and shows. Don’t miss out!</p>
+        <div class="d-flex mt-20px">
+          <div class="time-box" id="hour-digit-one"></div>
+          <div class="time-box ml-12px" id="hour-digit-two"></div>
+          <div class="ml-20px mr-20px time-icon">:</div>
+          <div class="time-box" id="min-digit-one"></div>
+          <div class="time-box ml-12px" id="min-digit-two"></div>
+          <div class="ml-20px mr-20px time-icon">:</div>
+          <div class="time-box" id="sec-digit-one"></div>
+          <div class="time-box ml-12px" id="sec-digit-two"></div>
+        </div>
+        <p class="text-gray mt-20px">
+          Get your membership and enjoy limited-time savings.
+        </p>
+        <div class="d-flex mt-20px button-section">
+          <div class="button-dark mr-24px">GET MY 70% OFF</div>
+          <div class="button-outline-dark">WHAT WILL I GET</div>
+        </div>
+        <div class="d-flex movies-container">
+          <div class="movies-block">
+            <div class="heading">30K+</div>
+            <p>MOVIES</p>
+          </div>
+          <div class="movies-block">
+            <div class="heading">8.2K+</div>
+            <p>SHOWS</p>
+          </div>
+          <div class="movies-block">
+            <div class="heading">200K+</div>
+            <p>EPISODES</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
