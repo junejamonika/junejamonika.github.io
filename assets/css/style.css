@@ -30,7 +30,7 @@ p {
   text-align: center;
 }
 .text-gray {
-  color:#8d8a8a;
+  color: #8d8a8a;
 }
 .ml-12px {
   margin-left: 20px;
@@ -60,7 +60,6 @@ p {
   text-align: center;
 }
 .offer-section a {
-  text-decoration: none;
   color: #fff;
 }
 .offer-section p:before {
@@ -92,7 +91,7 @@ p {
   color: #fff;
   font-weight: 600;
   border: none;
-  cursor:pointer
+  cursor: pointer;
 }
 .button-dark:hover {
   box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
@@ -159,11 +158,17 @@ p {
   margin: 0 5px;
   cursor: pointer;
 }
-.slick-slide:hover {
-  -webkit-transform: scale(1.13);
-  -moz-transform: scale(1.13);
-  transform: scale(1.13);
-  box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.35);
+.slick-slide img {
+  -webkit-backface-visibility: hidden;
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+  transform: translateZ(0);
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
 }
 .slick-dots {
   text-align: center;
@@ -227,10 +232,6 @@ p {
 .explore-section {
   text-align: center;
   margin-top: 15px;
-  padding-bottom: 45px;
-}
-.explore-section .button-outline {
-  padding: 12px 22px !important;
 }
 
 /* ------------------------------
@@ -249,8 +250,8 @@ Popup style
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -323,7 +324,7 @@ Popup style
 .movies-block {
   text-align: center;
   width: 172px;
-  padding-top:30px;
+  padding-top: 30px;
   padding-bottom: 30px;
   opacity: 0.9;
   background-color: #ffeedb;
@@ -342,18 +343,34 @@ Popup style
   font-weight: normal;
 }
 
+@media screen and (min-width: 1200px) {
+  .slick-slide:hover {
+    -webkit-transform: scale(1.13);
+    -moz-transform: scale(1.13);
+    transform: scale(1.13);
+    box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.35);
+  }
+}
+
 @media screen and (min-width: 500px) and (max-width: 1024px) {
+  .logo {
+    height: 80px !important;
+  }
+  #page-wrapper {
+    padding: 0 60px;
+  }
+  .top-bar {
+    margin-top: 20px;
+  }
   .main-heading {
-    margin-top: 60px;
+    margin-top: 20px;
+    font-size: 60px;
   }
   .offer-section p:before {
     display: none;
   }
   .offer-section p {
     font-size: 11px;
-  }
-  .slider-hero {
-    margin-top: 60px;
   }
   .modal {
     padding-top: 25%;
@@ -364,9 +381,12 @@ Popup style
   .slick-dots {
     margin: 25px 0 10px 0;
   }
+  .slick-list {
+    padding: 25px 50px 25px 50px !important;
+  }
   .movie-section {
     justify-content: space-between;
-    font-size: 50px;
+    font-size: 45px;
   }
   .movie-section img {
     width: 48px;
@@ -376,7 +396,7 @@ Popup style
     padding: 80px 30px;
   }
   .discount-heading {
-    margin-top:16px;
+    margin-top: 16px;
   }
   .movies-block {
     text-align: center;
@@ -385,6 +405,18 @@ Popup style
   }
   .mt-30px {
     margin-top: 60px;
+  }
+  .button-dark {
+    font-size: 35px;
+    padding: 22px 30px;
+  }
+  .button-outline {
+    font-size: 35px;
+    padding: 22px 30px;
+  }
+  .button-outline-dark {
+    font-size: 35px;
+    padding: 22px 30px;
   }
   .button-section .button-dark {
     flex-grow: 1;
